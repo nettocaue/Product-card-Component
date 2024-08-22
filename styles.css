@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  border: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+:root {
+  --dark-cyan: #3C8067;
+  --cream: #F2EBE3;
+  --dark-blue: #1C232B;
+  --darkGrayish-blue: #6C7289;
+  --white: #FFFFFF;
+  --font-text: "Montserrat";
+  --font-title: "Fraunces";
+}
+body {
+  background-color: var(--cream);
+  font-family: var(--font-text);
+  color: var(--dark-blue);
+  font-size: 14px;
+  font-weight: 500;
+  min-height: 100vh;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  width: 650px;
+}
+
+.img {
+  background-image: url("./images/image-product-desktop.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  
+}
+
+.container-texts {
+  background-color: var(--white);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.category {
+  letter-spacing: 5px;
+}
+
+.text {
+  letter-spacing: 1px;
+  line-height:1.5;
+}
+
+h1 {
+  font-family: var(--font-title);
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 35px;
+}
+
+.prices {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.prices p {
+  font-family: var(--font-title);
+  font-weight: 700;
+  font-size: 36px;
+  color: var(--dark-cyan);
+}
+
+.prices span {
+  color: var(--darkGrayish-blue);
+}
+
+button {
+  background-color: var(--dark-cyan);
+  color: var(--white);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  width: 100%;
+  border-radius: 8px;
+  gap: 10px;
+}
+
+@media screen and (max-width: 700px) {
+
+  body {
+    padding: 5%;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 100%;
+  }
+
+  .img {
+    background-image: url("./images/image-product-mobile.jpg");
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    border-bottom-left-radius: 0;
+  }
+
+  .container-texts {
+    padding: 20px;
+    gap: 20px;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    border-top-right-radius: 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr;
+    width: 100%;
+  }
+}
